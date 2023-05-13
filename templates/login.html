@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=3"
+          name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta property="qc:admins" content="754034015366713545637571540352652"/>
+    <meta property="wb:webmaster" content="1ad39047f32b5b6b"/>
+    <title>Patentmap 开始界面</title>
+</head>
+<script>
+</script>
+
+
+<link href="/static/authserver/custom/css/login.css" rel="stylesheet">
+<link href="/static/authserver/custom/css/iCheck/custom.css" rel="stylesheet">
+
+
+
+
+<script type="text/javascript">
+    var secure = "true";
+    var pwdDefaultEncryptSalt = "QDtO0KOAk3TbHcsb";
+</script>
+<script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+
+<body onload="loadFresh();">
+<div class="auth_page_wrapperdz">
+<div class="auth_dz_herder">
+    <img class="img" src="/static/authserver/custom/images/logomini.png" alt="logo"/>
+    <div class="language-wrap" id="languages">
+         <img src="/static/authserver/custom/images/language.png" alt="logo"/>
+         <img class="hovers" src="/static/authserver/custom/images/languageHover.png" alt="logo"/>
+         <span>English</span>
+    </div>
+</div>
+<div class="auth_login_content">
+    <div class="auth_login_left">
+        <div class="auth_others">
+            
+                <h4>Use the following ways to sign in</h4>
+                <ul>
+                    
+                        <li>
+                            <a href="combinedLogin.do?type=weixin&success=https%3A%2F%2Fcas.whu.edu.cn%2Fauthserver%2Flogin%3Fservice%3Dhttp%253A%252F%252Fehall.whu.edu.cn%252Flogin%253Fservice%253Dhttp%253A%252F%252Fehall.whu.edu.cn%252Fnew%252Findex.html"
+                               style="display: inline-block;">
+                                    <span class="auth_icon_bg">
+                                        <i class="auth_icon_weixin"></i>
+                                    </span>
+                                <span class="auth_icon_text">Use WeChat to sign in</span>
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+    
+        
+        
+        
+            
+        
+    
+    <div class="auth_dz_left">
+        <img class="mainbg" src="/static/authserver/custom/images/mainbg.png" alt="logo"/>
+        <div class="main_remark">
+            <h3 class="auth_tysfrz">登陆您的Patentmap账户</h3>
+            <ul class="auth_tishi">
+                <li>◆ 除账号密码登录外，还可通过动态码或微信登录</li>
+                <li>◆ 若忘记密码，请点击登录下面的“<a style="color: red;" href="https://cas.whu.edu.cn/face/getBackPwd"  >忘记密码</a>”自助修改</li>
+            </ul>
+            <p class="auth_aqts">安全提示:为了您的安全，请不定期修改密码</p>
+        </div>
+    </div>
+    <div class="auth_login_right">
+         <div class="logodz"><img src="/static/authserver/custom/images/logodz.png" alt="logo"/></div>
+        <div class="auth_tab">
+
+            <!-- 滑块验证码：-->
+            
+                
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=3"
+          name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta property="qc:admins" content="754034015366713545637571540352652"/>
+    <meta property="wb:webmaster" content="1ad39047f32b5b6b"/>
+    <title>Patentmap开始界面</title>
+    
+    
+    <style>
+        .slidercaptcha-fluid {
+        }
+
+        .slidercaptcha .card-body {
+            padding: 1rem;
+        }
+
+        .slidercaptcha canvas:first-child {
+            border-radius: 4px;
+            border: 1px solid #e6e8eb;
+        }
+
+        .slidercaptcha.card .card-header {
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .refreshIcon {
+            top: -54px;
+        }
+
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem;
+        }
+        .slidercaptcha{
+            margin: 0 auto;
+            width: 314px;
+            height: 266px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+            left: -5px;
+            top: 10px;
+            /*margin-top: 40px;
+            top: -550px;
+            right: -300px;*/
+        }
+        .slidercaptcha.card .card-header{
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+        .card-header:first-child{
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+        }
+        .card-header{
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+        .fa-arrow-right:before{
+            content: "\2192";
+        }
+        .fa{
+            font:normal normal normal 14px/1 FontAwesome;
+        }
+        .fa-repeat:before{
+            content:"\27F3";
+        }
+        .fa-close:before{
+            content:"\2716";
+        }
+    </style>
+</head>
+
+<link href="/static/authserver/custom/css/slidercaptcha.css" rel="stylesheet">
+<body style="height: 0px;">
+
+<div id="dxcaptcha" style="display: none"></div>
+<div class="container-fluid slidercaptcha-fluid" id="captcha-id" style="display: none;position: fixed;z-index: 999; width: 350px; height: 300px; ">
+    <div class="form-row">
+        <div class="col-12">
+            <div class="slidercaptcha card">
+                <div class="card-header">
+                    <span>Security verification</span>
+                </div>
+                <div class="card-body">
+                    <div id="captcha"
+                         style="position: relative; width: 280px; margin: 0px auto;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="img1" src="" style="display: none;">
+    <img id="img2" src="" style="display: none;">
+    <input type="hidden" id="loadingText" value="Slide to the right">
+    <input type="hidden" id="failedText" value="try again">
+</div>
+<script type="text/javascript" src="/static/authserver/custom/js/longbow.slidercaptcha.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/login-sliderCaptchaCreate.js"></script>
+
+</body>
+
+</html>
+            
+            <div class="auth_tab_links">
+                <ul>
+                    <li id="accountLogin" class="selected" tabid="01"><span class="language_en">Account login</span><span class="language_zh">账户登录</span></li>
+                        <li id="dyLogin" tabid="02"><i></i><span class="language_en">Code login</span><span class="language_zh">动态码登录</span></li>
+                    
+                    <li tabid="04"><span class="language_zh">微信登录</span><span class="language_en">Wechat login</span></li>
+                </ul>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="auth_tab_content">
+                <div tabid="04" class="auth_tab_content_item" style="display:none;">
+                    <iframe id="iframe" src="https://cas.whu.edu.cn/authserver/combinedLogin.do?type=weixin&success=https%3A%2F%2Fcas.whu.edu.cn%2Fauthserver%2Flogin%3Fservice%3Dhttp%253A%252F%252Fehall.whu.edu.cn%252Flogin%253Fservice%253Dhttp%253A%252F%252Fehall.whu.edu.cn%252Fnew%252Findex.html" frameborder="0"></iframe>
+                </div>
+                <div tabid="01" class="auth_tab_content_item">
+                    <form id="casLoginForm" class="fm-v clearfix amp-login-form" role="form" action="/login/" method="post">
+
+                        {% csrf_token %}
+                        <input type="hidden" name="form_id" value="casLoginForm">
+                         <div class="dzdiv">
+                             <p class="lable_p language_zh">账号</p>
+                             <p class="lable_p language_en">Account</p>
+                             <input id="username" name="username" placeholder="用户名" class="auth_inputdz zhdlyhm" type="text" value=""/>
+                        </div>
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">密码</p>
+                            <p class="lable_p language_en">Password</p>
+                            <input id="password" name="password" placeholder="密码" class="auth_inputdz zhdlmm" type="password" value="" autocomplete="off"/>
+                        </div>
+
+
+                        {% if message %}
+                        <div style="color:red;font-size:10px;">
+                            {{ message }}
+                        </div>
+                        {% endif %}
+
+
+                        
+                        <p style="min-height: 20px;">
+							
+                                <input type="checkbox" name="rememberMe" id="rememberMe"/>
+                                    <label class="jqmdl" onmousedown="javascript:$('.iCheck-helper').click();" style="font-size: 14px;">近期免登录</label>
+                            
+							<a id="getBackPasswordMainPage" href="#" class="auth_login_forgetp" onclick="openModal()">
+                                <small><span class="language_en">Forgot password?</span>
+                                    <span class="language_zh">忘记密码？</span>
+                                </small>
+                            </a>
+                            <!-- 弹出模态框 -->
+                            <div id="myModal" class="modal" style="display: none;width: 100%">
+                              <div class="modal-content">
+                                <span class="close" style="color: #d61f1f;" onclick="closeModal()">&times;</span>
+                                <form id="forgotPasswordForm" action="/send-pwd">
+                                  <label for="email">邮箱：</label>
+                                  <input type="email" name="email" id="email" class="auth_inputdz" required >
+                                  <button type="submit" style="position:absolute; right: 0;border: none;color: #04b381" onclick="changeaction()">发送密码</button>
+                                </form>
+                              </div>
+                            </div>
+                            <button onclick="openModal()" style="display: none;"></button>
+                            <script>
+                                // 打开模态框
+                                function openModal() {
+                                  document.getElementById("myModal").style.display = "block";
+                                }
+
+                                // 关闭模态框
+                                function closeModal() {
+                                  document.getElementById("myModal").style.display = "none";
+                                }
+                                function changeaction(){
+                                    document.getElementById("casLoginForm").action = "/send-pwd/";
+                                    document.getElementById("casLoginForm").submit();
+                                }
+                            </script>
+                        </p>
+                        
+
+                        <p>
+                                <button type="submit" class="auth_login_btn primary full_width" onclick="resetaction()">
+                                    <span class="language_en">sign in</span>
+                                    <span class="language_zh">登录</span></li>
+                                </button>
+                                <script>
+                                    function resetaction(){
+                                        document.getElementById("casLoginForm").action = "/login/";
+                                        document.getElementById("casLoginForm").submit();
+                                    }
+                                </script>
+                        </p>
+
+                        <p>
+                                <small >
+                                    <span class="language_en">haven't create your account? <a href={% url 'register' %} >register here</a></span>
+                                    <span class="language_zh">还未拥有账号?<a href={% url 'register' %} >点击此处注册</a></span></li>
+                                </small>
+                        </p>
+
+
+                        <input type="hidden" name="lt" value="LT-2966113-Id5cod3akf4BowjcH0R13MeDefKegD1680876989201-ThSs-cas"/>
+                        <input type="hidden" name="dllt" value="userNamePasswordLogin"/>
+                        <input type="hidden" name="execution" value="e2s1"/>
+                        <input type="hidden" name="_eventId" value="submit"/>
+                        <input type="hidden" name="rmShown" value="1">
+                        <input type="hidden" id="pwdDefaultEncryptSalt" value="QDtO0KOAk3TbHcsb"/>
+                    </form>
+                </div>
+                <input type="hidden" id="isSliderCaptcha" value="true"/>
+                <input type="hidden" id="isDxCaptcha" value="true"/>
+                
+                    <input type="hidden" id="sliderCaptchaDynamicCode" value="">
+                
+                    <div tabid="02" class="auth_tab_content_item" style="display:none;">
+                        <form id="casDynamicLoginForm" class="fm-v clearfix amp-login-form" action="/login/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="form_id" value="casDynamicLoginForm">
+                            <div class="dzdiv">
+                                <p class="lable_p language_zh">邮箱</p>
+                                <p class="lable_p language_en">Email</p>
+                                <input id="email" name="email" placeholder="邮箱" class="auth_inputdz dtdlsjh" type="text" value=""/>
+                            </div>
+                            
+                            <div class="dzdiv">
+                                <p class="lable_p language_zh">动态码</p>
+                                <p class="lable_p language_en">Dynamic code</p>
+                                <input type="text" class="auth_inputdz" id="dynamicCode" name="dynamicCode"
+                                       placeholder="动态码（dynamic code）" value=""/>
+                                <input type="button" id="getDynamicCode" value="获得（obtain）"
+                                       class="auth_login_btn abs_right dynamicCode"
+                                        onclick="sendEmailCode()"/>
+                                <script>
+                                  function sendEmailCode() {
+                                          var email = document.getElementById("email").value;
+                                          var xhr = new XMLHttpRequest();
+                                          xhr.open("POST", "/send-code/", true);
+                                          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                          xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                                          xhr.onreadystatechange = function () {
+                                            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                                              // 请求成功后的操作
+                                            }
+                                          };
+                                          xhr.send("email=" + encodeURIComponent(email));
+                                        }
+                                </script>
+                            </div>
+                                <p>
+                                <button type="submit" class="auth_login_btn primary full_width">
+                                    <span class="language_en">sign in</span>
+                                    <span class="language_zh">登录</span></li>
+                                </button>
+                                </p>
+                            
+                            
+
+                            <input type="hidden" name="lt" value="LT-2966113-Id5cod3akf4BowjcH0R13MeDefKegD1680876989201-ThSs-cas"/>
+                            <input type="hidden" name="dllt" value="dynamicLogin"/>
+                            <input type="hidden" name="execution" value="e2s1"/>
+                            <input type="hidden" name="_eventId" value="submit"/>
+                            <input type="hidden" name="rmShown" value="1">
+                            <input type="hidden" id="dynamicPwdEncryptSalt" value="A0IJPbyjiHLrGVKw"/>
+                        </form>
+                    </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hidenCaptchaDiv" style="display: none;">
+    <p class="lable_p">验证码</p>
+    <input type="text" placeholder="Verification code" id="captchaResponse" name="captchaResponse"
+           class="auth_inputdz captcha-input"/>
+    <img id="captchaImg" class="captcha-img" alt="Verification code" title="Verification code"/>
+            <span style="cursor: pointer;color: #1dadff;margin-left: 2px;" id="changeCaptcha"
+                  class="chk_text"></span>
+    <span id="cpatchaError" style="display:none;" class="auth_error">Please input the verification code</span>
+</div>
+
+
+<div class="clearfloat"></div>
+<div class="auth_login_footer">
+    
+
+ <span>
+     Copyright&nbsp;©&nbsp;2023 Wuhan&nbsp; University&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;版权没有&nbsp;&nbsp;武汉大学
+ </span>
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="/static/authserver/custom/js/login-languagedz.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/icheck.min.js"></script>
+
+<script type="text/javascript" src="/static/authserver/custom/js/login.js?v=1.0"></script>
+<script src="https://cdn.dingxiang-inc.com/ctu-group/captcha-ui/index.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/encrypt.js"></script>
+
+<script type="text/javascript">
+
+    // 选中tab框
+    var dllt = '';
+    if (dllt != '' && dllt == 'dynamicLogin') {
+        selectLi($("#dyLogin"));
+    } else if (dllt != '' && dllt == 'qrLogin'){
+        getQrCode();
+        countDown();
+        selectLi($("#qrLogin"));
+    } else {
+        selectLi($("#accountLogin"));
+    }
+
+    $(document).ready(function () {
+        
+        
+
+        var service = GetQueryString("service");
+    <!--    if (service) {
+            $("#getBackPasswordMainPage").attr("href", "getBackPasswordMainPage.do?service=" + encodeURIComponent(service));
+        }  -->
+    });
+
+
+</script>
+</body>
+
+</html>
+
+    
+

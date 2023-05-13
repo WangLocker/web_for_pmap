@@ -1,0 +1,175 @@
+<link rel="stylesheet" href="/static/authserver/custom/css/mobile/mobile-common.css" />
+<link rel="stylesheet" href="/static/authserver/custom/mobile/custom/css/skin.css" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>统一身份认证</title>
+    </head>
+
+    <script type="text/javascript">
+        var secure = "true";
+        var pwdDefaultEncryptSalt = "RsflMGLQkkADB60A";
+    </script>
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+    <body class="login-idx-body body-bg login">
+    <div class="main">
+        <header>
+            PatentMap
+            <div class="language-wrap" id="languages">
+                <img src="/static/authserver/custom/images/language.png" alt="logo"/>
+                <span>English</span>
+            </div>
+        </header>
+        <article class="dz-article">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+
+    </html>
+
+        <div class="mobile-logos"><img src="/static/authserver/custom/images/logodz.png" alt="logo"/></div>
+        <form id="casLoginForm" class="login-idx-form" action="/login/" role="form" method="post">
+
+            {% csrf_token %}
+            <input type="hidden" name="form_id" value="casLoginForm">
+            <div class="item">
+                <span class="icon"><i class="icon-person"></i></span>
+                <input id="mobileUsername" name="username" placeholder="用户名" class="input zhdlyhm" type="text" value=""/>
+                <span id="usernameEmpty" style="display: none">请输入用户名</span>
+            </div>
+            <div class="item">
+                <span class="icon"><i class="icon-lock"></i></span>
+                <input id="mobilePassword" name="password" placeholder="密码" class="input zhdlmm" type="password" value=""/>
+
+                <input id="mobilePasswordEncrypt"  style="display:none;" type="text" value=""/>
+                <span id="passwordEmpty" style="display: none">请输入密码</span>
+            </div>
+
+            {% if message %}
+                        <div style="color:red;font-size:10px;">
+                            {{ message }}
+                        </div>
+            {% endif %}
+
+            <div class="login-btn">
+
+                    <button type="submit" class="dzlogin-button" onclick="resetaction()">
+                                    <span class="language_en">sign in</span>
+                                    <span class="language_zh">登录</span></li>
+                    </button>
+                    <script>
+                                    function resetaction(){
+                                        document.getElementById("casLoginForm").action = "/login/";
+                                        document.getElementById("casLoginForm").submit();
+                                    }
+                    </script>
+
+            </div>
+            <div class="login-idx-opt">
+
+
+                        <input type="checkbox" name="rememberMe" id="rememberMe" >
+                        <label for="rememberMe" class="jqmdl">近期免登录</label>
+
+                <a id="getBackPasswordMainPage" href="#" style="text-decoration: none;color: #00A185;float: right;" onclick="openModal()">
+                    <small><span class="language_en">Forgot password?</span>
+                        <span class="language_zh">忘记密码？</span>
+                    </small>
+                </a>
+                <!-- 弹出模态框 -->
+                <div id="myModal" class="modal" style="display: none;width: 100%">
+                    <div class="modal-content">
+                        <span class="close" style="color: #d61f1f;" onclick="closeModal()">&times;</span>
+                        <form id="forgotPasswordForm" action="/send-pwd">
+                            <label for="email" style="color: #1d2124">邮箱：</label>
+                            <input type="email" name="email" id="email" style="width: 100%;padding-left: 15px;box-sizing: border-box;height: 30px;border: none;outline: none;border-bottom: 1px solid #cdcdcd;" required >
+                            <button type="submit" style="position:absolute; right: 30;border: none;color: #04b381" onclick="changeaction()">发送密码</button>
+                        </form>
+                    </div>
+                </div>
+                <button onclick="openModal()" style="display: none;"></button>
+                <script>
+                                // 打开模态框
+                                function openModal() {
+                                  document.getElementById("myModal").style.display = "block";
+                                }
+
+                                // 关闭模态框
+                                function closeModal() {
+                                  document.getElementById("myModal").style.display = "none";
+                                }
+                                function changeaction(){
+                                    document.getElementById("casLoginForm").action = "/send-pwd/";
+                                    document.getElementById("casLoginForm").submit();
+                                }
+                </script>
+            </div>
+                        <p>
+                                <small >
+                                    <span class="language_en">haven't create your account? <a href={% url 'register' %} >register here</a></span>
+                                    <span class="language_zh">还未拥有账号?<a href={% url 'register' %} >点击此处注册</a></span></li>
+                                </small>
+                        </p>
+
+            <input type="hidden" name="lt" value="LT-19074297-JDn2ZDXySQfk1yYngQJ2crHE47kQcX1683890656627-yepf-cas"/>
+
+
+            <input type="hidden" name="dllt" value="userNamePasswordLogin"/>
+
+            <input type="hidden" name="execution" value="e1s1"/>
+            <input type="hidden" name="_eventId" value="submit"/>
+            <input type="hidden" name="rmShown" value="1">
+            <input type="hidden" id="sign" name="sign" value="">
+
+        </form>
+
+    </article>
+    <div class="social-aut-login login-div">
+    <h3 class="h3"><b>
+        <span class="language_en">其他登陆方式</span>
+        <span class="language_zh">other ways to sign in</span>
+    </b></h3>
+    <div class="div">
+        <div class="div">
+        <a id="mCodeId" href="mobilecode/"
+                       class="item"><div><i class="icon-sms"></i>
+            <div>
+                <span class="language_en">EmailCode</span>
+                <span class="language_zh">动态码登录</span>
+            </div>
+        </div>
+        </a>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-common.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-login_v1.0.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/login-languagedz.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/encrypt.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var service = GetQueryString("service");
+        if (service) {
+            $("#mCodeId").attr("href",$("#mCodeId").attr("href")+"&service=" + encodeURIComponent(service));
+        }
+    });
+</script>
+
+
+
+
+            
+        
+    
+    
+

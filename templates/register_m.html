@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="/static/authserver/custom/css/mobile/mobile-common.css" />
+<link rel="stylesheet" href="/static/authserver/custom/mobile/custom/css/skin.css" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>统一身份认证</title>
+    </head>
+
+    <script type="text/javascript">
+        var secure = "true";
+        var pwdDefaultEncryptSalt = "RsflMGLQkkADB60A";
+    </script>
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+    <body class="login-idx-body body-bg login">
+    <div class="main">
+        <header>
+            PatentMap
+            <div class="language-wrap" id="languages">
+                <img src="/static/authserver/custom/images/language.png" alt="logo"/>
+                <span>English</span>
+            </div>
+        </header>
+        <article class="dz-article">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+
+    </html>
+
+        <div class="mobile-logos"><img src="/static/authserver/custom/images/logodz.png" alt="logo"/></div>
+                    <form id="casLoginForm" class="login-idx-form" role="form" action="/register/verify/" method="post">
+                        {% csrf_token %}
+
+                         <div class="item1">
+                             <p class="lable_p language_zh">用户名</p>
+                             <p class="lable_p language_en">Account name</p>
+                             <input id="username" name="username" placeholder="用户名" class="input zhdlyhm" type="text" value=""/>
+                        </div>
+
+                        <div class="item1">
+                            <p class="lable_p language_zh">密码</p>
+                            <p class="lable_p language_en">Password</p>
+                            <input id="password" name="password1" placeholder="设置您的密码" class="input zhdlyhm" type="password" value="" autocomplete="off"/>
+                        </div>
+
+                        <div class="item1">
+                            <p class="lable_p language_zh">确认密码</p>
+                            <p class="lable_p language_en"> Confirm Password</p>
+                            <input id="confirm_password" name="password2" placeholder="确认您的密码" class="input register_conf_pwd" type="password" value="" autocomplete="off"/>
+                        </div>
+
+
+                        <div class="item1">
+                            <p class="lable_p language_zh">邮箱</p>
+                            <p class="lable_p language_en">Email</p>
+                            <input id="email" name="email" placeholder="邮箱" class="input register_email" type="text" value="" />
+                        </div>
+
+
+                        <div class="item1">
+                            <p class="lable_p language_zh">性别</p>
+                            <p class="lable_p language_en">Gender</p>
+                            <div>
+                                <select name="sex" style="height: 40px;width: 100%;outline: none;border:none">
+                                <option value='male' >♂</option>
+                                <option value='female' >♀</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="item1">
+                            <p class="lable_p language_zh">工作/教育单位</p>
+                            <p class="lable_p language_en">Work/education units</p>
+                            <input id="work_edu" name="cv" placeholder="完善您的个人信息" class="input register_cv" type="text" value="" />
+                        </div>
+
+
+
+                        {% if message %}
+                        <div style="color:red;font-size:10px;">
+                            {{ message }}
+                        </div>
+                        {% endif %}
+                        <p>
+                                <button type="submit" class="dzlogin-button">
+                                    <span class="language_en">register</span>
+                                    <span class="language_zh">注册</span></li>
+                                </button>
+                        </p>
+                    </form>
+
+    </article>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-common.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-login_v1.0.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/login-languagedz.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/encrypt.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var service = GetQueryString("service");
+        if (service) {
+            $("#mCodeId").attr("href",$("#mCodeId").attr("href")+"&service=" + encodeURIComponent(service));
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+

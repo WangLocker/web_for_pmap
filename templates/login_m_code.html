@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="/static/authserver/custom/css/mobile/mobile-common.css" />
+<link rel="stylesheet" href="/static/authserver/custom/mobile/custom/css/skin.css" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>统一身份认证</title>
+    </head>
+
+    <script type="text/javascript">
+        var secure = "true";
+        var pwdDefaultEncryptSalt = "RsflMGLQkkADB60A";
+    </script>
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+    <body class="login-idx-body body-bg login">
+    <div class="main">
+        <header>
+            PatentMap
+            <div class="language-wrap" id="languages">
+                <img src="/static/authserver/custom/images/language.png" alt="logo"/>
+                <span>English</span>
+            </div>
+        </header>
+        <article class="dz-article">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+
+    <script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+
+    </html>
+
+        <div class="mobile-logos"><img src="/static/authserver/custom/images/logodz.png" alt="logo"/></div>
+        <form id="casDynamicLoginForm" class="login-idx-form" action="/login/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="form_id" value="casDynamicLoginForm">
+                            <div class="item1">
+                                <p class="lable_p language_zh">邮箱</p>
+                                <p class="lable_p language_en">Email</p>
+                                <input id="email" name="email" placeholder="邮箱" class="input_b dtdlsjh" type="text" value=""/>
+                            </div>
+
+                            <div class="item1">
+                                <p class="lable_p language_zh">动态码</p>
+                                <p class="lable_p language_en">Dynamic code</p>
+                                <input type="text" class="input_c" id="dynamicCode" name="dynamicCode"
+                                       placeholder="动态码（dynamic code）" value=""/>
+                                <input type="button" id="getDynamicCode" value="获得(obtain)"
+                                       class="get_bt dynamicCode"
+                                        onclick="sendEmailCode()"/>
+                                <script>
+                                  function sendEmailCode() {
+                                          var email = document.getElementById("email").value;
+                                          var xhr = new XMLHttpRequest();
+                                          xhr.open("POST", "/send-code/", true);
+                                          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                          xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                                          xhr.onreadystatechange = function () {
+                                            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                                              // 请求成功后的操作
+                                            }
+                                          };
+                                          xhr.send("email=" + encodeURIComponent(email));
+                                        }
+                                </script>
+                            </div>
+                                <p>
+                                <button type="submit" class="dzlogin-button">
+                                    <span class="language_en">sign in</span>
+                                    <span class="language_zh">登录</span></li>
+                                </button>
+                                </p>
+
+
+
+                            <input type="hidden" name="lt" value="LT-2966113-Id5cod3akf4BowjcH0R13MeDefKegD1680876989201-ThSs-cas"/>
+                            <input type="hidden" name="dllt" value="dynamicLogin"/>
+                            <input type="hidden" name="execution" value="e2s1"/>
+                            <input type="hidden" name="_eventId" value="submit"/>
+                            <input type="hidden" name="rmShown" value="1">
+                            <input type="hidden" id="dynamicPwdEncryptSalt" value="A0IJPbyjiHLrGVKw"/>
+                        </form>
+
+    </article>
+    <div class="social-aut-login login-div">
+    <h3 class="h3"><b>
+        <span class="language_en">other ways to sign in</span>
+        <span class="language_zh">其他登陆方式</span>
+    </b></h3>
+    <div class="div">
+        <div class="div">
+        <a id="mCodeId" href="/login"
+                       class="item"><div><i class="icon-sms"></i>
+            <div>
+                <span class="language_en">password</span>
+                <span class="language_zh">密码登录</span>
+            </div>
+        </div>
+        </a>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-common.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/mobile/mobile-login_v1.0.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/login-languagedz.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/encrypt.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var service = GetQueryString("service");
+        if (service) {
+            $("#mCodeId").attr("href",$("#mCodeId").attr("href")+"&service=" + encodeURIComponent(service));
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+

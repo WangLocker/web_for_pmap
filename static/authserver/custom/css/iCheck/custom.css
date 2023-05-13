@@ -1,0 +1,275 @@
+/* iCheck plugin Square skin, green
+----------------------------------- */
+.icheckbox_square-green,
+.iradio_square-green {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-green {
+    background-position: 0 0;
+}
+.icheckbox_square-green.hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+    background-position: -48px 0;
+}
+.icheckbox_square-green.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+.icheckbox_square-green.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-green {
+    background-position: -120px 0;
+}
+.iradio_square-green.hover {
+    background-position: -144px 0;
+}
+.iradio_square-green.checked {
+    background-position: -168px 0;
+}
+.iradio_square-green.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+.iradio_square-green.checked.disabled {
+    background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_square-green,
+    .iradio_square-green {
+        background-image: url(green@2x.png);
+        -webkit-background-size: 240px 24px;
+        background-size: 240px 24px;
+    }
+}
+
+
+
+/*****2019003*****/
+.clearfix{
+	clear:both;
+}
+.auth_page_wrapper_new{
+	width: 1000px;
+    margin: 0 auto;
+}
+.login_top{
+	margin:20px 0px;
+}
+.switch-userbox,.switch-dynabox{
+    cursor: pointer;
+	padding: 12px 50px;
+	color:#fff;
+}
+.current{
+	color:#2068ad;
+	background-color: #e7ecef;
+}
+.switch-userbox{
+	float:left;  
+}
+.switch-dynabox{
+	float:right;
+}
+.auth_icon {
+    border: none;
+    float: left;
+	width: 28px;
+    height: 32px;
+}
+.auth_icon_user {
+    background: url(../../images_new/q1.png) 12px 12px no-repeat;
+
+}
+.auth_icon_pwd {
+    background: url(../../images_new/q2.png) 12px 12px no-repeat;
+
+}
+.iptK {
+    border: none;
+    margin: 0;
+	padding: 10px 8px;
+    font-size: 13px;
+    width: 222px;
+    color: #999;
+	background-color: transparent;
+
+}
+.auth_inputi_bg {
+    border: 1px solid #1999dc;
+    background-color: rgba(255,255,255,.2);
+	margin-bottom: 22px;
+	width: 270px;
+	margin-left: 44px;
+}
+.fm-item{
+	
+}
+ input::-webkit-input-placeholder{
+             color: #99b8d7;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color: #99b8d7;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color: #99b8d7;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color: #99b8d7;
+        }
+.btn-login{
+	background-color: #e87610;
+    border: none;
+    color: #fff;
+    width: 270px;
+    height: 40px;
+	margin-bottom:12px;
+	margin-left: 44px;
+	font-size: 14px;
+    letter-spacing: -2px;
+	cursor: pointer;
+	margin-top: 16px;
+}
+.btn-login:hover{
+	-o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color:#d76b0b;
+}
+.forgetbox{
+	display: block;
+    margin-left: 44px;
+    text-decoration: none;
+	font-size:13px;
+	text-align: left;
+    margin-left: 44px;
+}
+.forgetbox:hover{
+	color:#0c83c2;
+	-o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.xuanze{
+	background-color: #e7ecef;
+	text-align: center;
+}
+.login-aside .amp-login-form{
+	margin-top: 66px;
+    position: absolute;
+}
+.box-right_new ul li{
+	list-style-type: none;
+	color:#fff;
+	font-size: 13px;
+}
+.box-right_new ul{
+    margin: 0;
+    padding: 0;
+    margin-top: 14px;
+}
+
+.tishi-link{
+    color: #28abcc;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+}
+
+.dynamicCode {
+    width: 70px;
+    padding: 7px 6px;
+    margin-top: 0px;
+    cursor: pointer;
+    font-family: 'Microsoft YaHei';
+	color: #28abcc;
+	margin-right: 60px;
+}
+.auth_icon_bar{
+	background-color: transparent;
+}
+.auth_icon_ver{
+	background-color: transparent;
+	background: url(../../images_new/q3.png) -43px -73px no-repeat;	
+}
+.auth_input_ver {
+	width:100px;
+    border: 1px solid #1999dc;
+    padding: 9px 8px;
+    font-size: 13px;
+    color: #676a6c;
+	background-color: transparent;
+}
+.fm-item-dtm{
+	margin-left: -138px;
+    margin-bottom: 20px;
+}
+#msg{
+	font-size: 13px;
+    color: red;
+}
+#usernameError,#passwordError{
+	position: absolute;
+    left: 80px;
+    font-size: 13px;
+    color: red;
+}
+.auth_icon_bar {
+    background: url(../../images_new/q3.png) -43px -73px no-repeat;
+}
+.code-cap-input{
+	border: 1px solid #1999dc;
+    background-color: rgba(255,255,255,.2);
+}
+#dynamicCodeError{
+	position: absolute;
+    left: 44px;
+    top: 120px;
+    color: red;
+    font-size: 13px;
+}
+#dynamicNameError{
+	position: absolute;
+    color: red;
+    font-size: 13px;
+    left: 44px;
+}
+.dynamicCode:hover {
+    color:#0b9dc2;
+    background-color:#fef7f7;
+	-o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#dymsg{
+	font-size: 13px;
+    color: red;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=3"
+          name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta property="qc:admins" content="754034015366713545637571540352652"/>
+    <meta property="wb:webmaster" content="1ad39047f32b5b6b"/>
+    <title>Unified Identity Authentication</title>
+</head>
+
+
+<link href="/static/authserver/custom/css/login.css" rel="stylesheet">
+<link href="/static/authserver/custom/css/iCheck/custom.css" rel="stylesheet">
+
+
+<script type="text/javascript">
+    var secure = "true";
+    var pwdDefaultEncryptSalt = "QDtO0KOAk3TbHcsb";
+</script>
+
+
+<script type="text/javascript" src="/static/authserver/custom/js/jquery.min.js"></script>
+
+
+<body onload="loadFresh();">
+    <div class="auth_page_wrapperdz">
+    <div class="auth_dz_herder">
+        <img class="img" src="/static/authserver/custom/images/logomini.png" alt="logo"/>
+        <div class="language-wrap" id="languages">
+             <img src="/static/authserver/custom/images/language.png" alt="logo"/>
+             <img class="hovers" src="/static/authserver/custom/images/languageHover.png" alt="logo"/>
+             <span>English</span>
+        </div>
+    </div>
+
+
+    <div class="auth_login_content">
+
+    <div class="auth_dz_left">
+        <img class="mainbg" src="/static/authserver/custom/images/mainbg.png" alt="logo"/>
+        <div class="main_remark">
+            <h3 class="auth_tysfrz">注册您的Patentmap账户</h3>
+            <ul class="auth_tishi">
+                <li>◆ 除账号密码登录外，还可通过注册邮箱进行动态码登录</li>
+                <li>◆ 如果您愿意完善个人信息，这将有助于我们为您提供更好的服务</li>
+            </ul>
+            <p class="auth_aqts">安全提示:为了您的安全，请不定期修改密码</p>
+        </div>
+    </div>
+    <div class="auth_login_right">
+         <div class="logodz"><img src="/static/authserver/custom/images/logodz.png" alt="logo"/></div>
+        <div class="auth_tab">
+
+            <!-- 滑块验证码：-->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=3"
+          name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta property="qc:admins" content="754034015366713545637571540352652"/>
+    <meta property="wb:webmaster" content="1ad39047f32b5b6b"/>
+    <title>Unified Identity Authentication</title>
+
+
+    <style>
+        .slidercaptcha-fluid {
+        }
+
+        .slidercaptcha .card-body {
+            padding: 1rem;
+        }
+
+        .slidercaptcha canvas:first-child {
+            border-radius: 4px;
+            border: 1px solid #e6e8eb;
+        }
+
+        .slidercaptcha.card .card-header {
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .refreshIcon {
+            top: -54px;
+        }
+
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem;
+        }
+        .slidercaptcha{
+            margin: 0 auto;
+            width: 314px;
+            height: 266px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+            left: -5px;
+            top: 10px;
+            /*margin-top: 40px;
+            top: -550px;
+            right: -300px;*/
+        }
+        .slidercaptcha.card .card-header{
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+        .card-header:first-child{
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+        }
+        .card-header{
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+        .fa-arrow-right:before{
+            content: "\2192";
+        }
+        .fa{
+            font:normal normal normal 14px/1 FontAwesome;
+        }
+        .fa-repeat:before{
+            content:"\27F3";
+        }
+        .fa-close:before{
+            content:"\2716";
+        }
+    </style>
+</head>
+
+<link href="/static/authserver/custom/css/slidercaptcha.css" rel="stylesheet">
+<body style="height: 0px;">
+
+<div id="dxcaptcha" style="display: none"></div>
+<div class="container-fluid slidercaptcha-fluid" id="captcha-id" style="display: none;position: fixed;z-index: 999; width: 350px; height: 300px; ">
+    <div class="form-row">
+        <div class="col-12">
+            <div class="slidercaptcha card">
+                <div class="card-header">
+                    <span>Security verification</span>
+                </div>
+                <div class="card-body">
+                    <div id="captcha"
+                         style="position: relative; width: 280px; margin: 0px auto;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="img1" src="" style="display: none;">
+    <img id="img2" src="" style="display: none;">
+    <input type="hidden" id="loadingText" value="Slide to the right">
+    <input type="hidden" id="failedText" value="try again">
+</div>
+<script type="text/javascript" src="/static/authserver/custom/js/longbow.slidercaptcha.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/login-sliderCaptchaCreate.js"></script>
+
+</body>
+
+</html>
+
+            <div class="auth_tab_links">
+                <ul>
+                    <li id="accountLogin" class="selected" tabid="01">
+                        <span class="language_en">Account Register</span><span class="language_zh">用户注册</span></li>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="auth_tab_content">
+
+                <div tabid="01" style="max-height: 600px;">
+                    <form id="casLoginForm" class="fm-v clearfix amp-login-form" role="form" action="/register/verify/" method="post">
+                        {% csrf_token %}
+
+                         <div class="dzdiv">
+                             <p class="lable_p language_zh">用户名</p>
+                             <p class="lable_p language_en">Account name</p>
+                             <input id="username" name="username" placeholder="您可以使用此项作为账号进行登陆" class="auth_inputdz register_acc" type="text" value=""/>
+                        </div>
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">密码</p>
+                            <p class="lable_p language_en">Password</p>
+                            <input id="password" name="password1" placeholder="设置您的密码，请确保安全性" class="auth_inputdz register_pwd" type="password" value="" autocomplete="off"/>
+                        </div>
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">确认密码</p>
+                            <p class="lable_p language_en">Confirm Password</p>
+                            <input id="confirm_password" name="password2" placeholder="确认您的密码，请保持一致" class="auth_inputdz register_conf_pwd" type="password" value="" autocomplete="off"/>
+                        </div>
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">邮箱</p>
+                            <p class="lable_p language_en">Email</p>
+                            <input id="email" name="email" placeholder="您可以使用此项进行动态码登录" class="auth_inputdz register_email" type="text" value="" />
+                        </div>
+
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">性别</p>
+                            <p class="lable_p language_en">Gender</p>
+                            <div>
+                                <select name="sex" style="height: 30px;width: 100%;outline: none;border:none">
+                                <option value='male' >♂</option>
+                                <option value='female' >♀</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="dzdiv">
+                            <p class="lable_p language_zh">工作/教育单位</p>
+                            <p class="lable_p language_en">Work/education units</p>
+                            <input id="work_edu" name="cv" placeholder="完善您的个人信息，方便我们为您提供更好的服务" class="auth_inputdz register_cv" type="text" value="" />
+                        </div>
+
+
+
+                        {% if message %}
+                        <div style="color:red;font-size:10px;">
+                            {{ message }}
+                        </div>
+                        {% endif %}
+                        <p>
+                                <button type="submit" class="auth_login_btn primary full_width">
+                                    <span class="language_en">register</span>
+                                    <span class="language_zh">注册</span></li>
+                                </button>
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clearfloat"></div>
+<div class="auth_login_footer">
+
+
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="/static/authserver/custom/js/login-languagedz.js"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/icheck.min.js"></script>
+
+<script type="text/javascript" src="/static/authserver/custom/js/login.js?v=1.0"></script>
+<script src="https://cdn.dingxiang-inc.com/ctu-group/captcha-ui/index.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/authserver/custom/js/encrypt.js"></script>
+
+
+</body>
+
+</html>
+
+
+

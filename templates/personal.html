@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/authserver/custom/images/logodz.png">
+    <title>PATENTMAP-个人中心</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/authserver/custom/css/personal/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/authserver/custom/css/personal/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="/static/authserver/custom/css/personal/default-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+
+<body class="fix-header card-no-border fix-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">PatentMap</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="login.html">
+                        <!-- Logo icon --><b>
+                            <img src="/static/authserver/custom/images/logodz.png" alt="logo" class="dark-logo" width="AUTO" height="45"/>
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="#"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ==============
+        ================================================ -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="/personal.html" aria-expanded="false"><i class="my_profile"></i><span class="hide-menu">个人信息</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="message.html" aria-expanded="false"><i class="my_message"></i><span class="hide-menu">我的消息</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="password.html" aria-expanded="false"><i class="change_password"></i><span class="hide-menu">修改密码</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="account.html" aria-expanded="false"><i class="account_management"></i><span class="hide-menu">账户管理</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="settings.html" aria-expanded="false"><i class="my_settings"></i><span class="hide-menu">个人设置</span></a></li>
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="/personal_logout/" class="btn waves-effect waves-light btn-info hidden-md-down"> 退出登录</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">个人信息</h3>
+                    </div>
+
+
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <br> <img src='/{{images.image}}' class="img-circle" alt="头像" width="150" >
+                                    <h4 class="card-title m-t-10">{{ user_data.nick_name }}</h4>
+                                    <h6 class="card-subtitle">{{ user_data.name }}</h6>
+                                    <div class="row text-center justify-content-md-center">
+
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-horizontal form-material">
+
+                                    <div class="form-group">
+                                        <label class="col-md-12">账号</label>
+                                        <div class="col-md-12">
+                                            <input type="account" placeholder="{{ user_data.name }}" class="form-control form-control-line" onfocus=this.blur()>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">用户名</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="{{ user_data.nick_name }}" class="form-control form-control-line" onfocus=this.blur()>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">电子邮箱</label>
+                                        <div class="col-md-12">
+                                            <input type="email" placeholder="{{ user_data.email }}" class="form-control form-control-line" name="example-email" id="example-email" onfocus=this.blur()>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-12">工作/教育单位</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="{{ user_data.cv }}" class="form-control form-control-line" onfocus=this.blur()>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-12">性别</label>
+                                        <div class="col-md-12">
+                                            <input type="gender" placeholder="{{user_data.sex}}" class="form-control form-control-line" onfocus=this.blur()></div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">创建日期</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="{{ user_data.c_time }}" class="form-control form-control-line" onfocus=this.blur()>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-12">账户地区</label>
+                                        <div class="col-sm-12">
+                                           <input type="region" placeholder="{{ user_data.region }}" class="form-control form-control-line" onfocus=this.blur()>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">个人简介</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" placeholder="{{ user_data.profile }}" class="form-control form-control-line" onfocus=this.blur()></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <a href="/personal_edit/" class="btn btn-success">编辑</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">PATENTMAP  2023</a></footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/static/authserver/custom/js/jquery1.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/static/authserver/custom/js/popper.min.js"></script>
+    <script src="/static/authserver/custom/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="/static/authserver/custom/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="/static/authserver/custom/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/static/authserver/custom/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/static/authserver/custom/js/custom.min.js"></script>
+</body>
+
+</html>
